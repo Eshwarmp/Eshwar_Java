@@ -1,4 +1,4 @@
-// 3 digit armstrog number
+//  armstrog number
 import java.util.Scanner;
 
 public class Armstrong {
@@ -7,10 +7,18 @@ public class Armstrong {
         System.out.println("Armstrong number or not");
         int num = in.nextInt();
         int temp = num;
+        int temp1 = num;
+        int count = 0;
         int sum = 0;
+        while (temp1 > 0) {
+            int last = temp1 % 10;
+            count++;
+            temp1 /= 10;
+        }
+        
         while (temp > 0) {
             int digit = temp % 10;
-            sum = sum + (digit * digit * digit);
+            sum = sum + (int)Math.pow(digit, count);
             temp /= 10;
         }
         if (sum == num) {
@@ -19,5 +27,6 @@ public class Armstrong {
         else {
             System.out.println("Number is not armstrong");
         }
+        in.close();
     }
 }
