@@ -14,6 +14,6 @@ public class Input {
         // which eventually skips the next line hence we are adding one extra nextline() to avoid the case
         String name = user.nextLine();
         System.out.println(name);
-        
+        user.close();   
     }
 }
