@@ -57,8 +57,8 @@ public class SearchInRBS_Duplicates {
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == target) {
-                a = mid;
-                end = mid - 1;
+                a = mid; // holds the value
+                end = mid - 1; // search again for left for the first occurance..
             } else if (arr[mid] > target) {
                 end = mid - 1;
             } else {
