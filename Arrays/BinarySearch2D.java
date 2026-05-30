@@ -10,7 +10,7 @@ public class BinarySearch2D {
                 { 24, 27, 38, 46 },
                 { 26, 28, 39, 49 }
         };
-        int target = 49;
+        int target = 49; 
         System.out.println(Arrays.toString(search(arr, target)));
     }
     
