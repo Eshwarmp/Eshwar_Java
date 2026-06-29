@@ -14,11 +14,11 @@ public class Palindrome {
             i++;
             j--;
         }
-        if (isPalindrome == true) {
-            System.out.println("Palindrome");
+        if (isPalindrome) {
+            System.out.println("It is Palindrome");
         }
         else {
-            System.out.println("Not a palindrome");
+            System.out.println("It is not a Palindrome");
         }
     }
 }
