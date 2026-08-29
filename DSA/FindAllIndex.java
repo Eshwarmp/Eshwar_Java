@@ -10,7 +10,8 @@ public class FindAllIndex {
         // ArrayList<Integer> ans = new ArrayList<>();
         // answer(arr, target, 0);
         // System.out.println(list);
-        ArrayList<Integer> result = ans(arr, target, 0, list);
+        ArrayList<Integer> res = new ArrayList<>();
+        ArrayList<Integer> result = ans(arr, target, 0, res);
         System.out.println(result);
     }
 
