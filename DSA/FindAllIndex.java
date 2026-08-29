@@ -8,8 +8,10 @@ public class FindAllIndex {
         int[] arr = { 1, 2, 3, 4, 4, 5 };
         int target = 4;
         // ArrayList<Integer> ans = new ArrayList<>();
-        answer(arr, target, 0);
-        System.out.println(list);
+        // answer(arr, target, 0);
+        // System.out.println(list);
+        ArrayList<Integer> result = ans(arr, target, 0, list);
+        System.out.println(result);
     }
 
     static ArrayList<Integer> list = new ArrayList<>();
@@ -21,6 +23,16 @@ public class FindAllIndex {
         if (arr[index] == target) {
             list.add(index);
         }
-        answer(arr, target, index+1);
+        answer(arr, target, index + 1);
+    }
+    
+    public static ArrayList<Integer> ans(int[] arr, int target, int index, ArrayList<Integer> list) {
+        if (index == arr.length) {
+            return list;
+        }
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        return ans(arr, target, index + 1, list);
     }
 }
