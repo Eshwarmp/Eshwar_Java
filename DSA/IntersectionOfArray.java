@@ -16,8 +16,11 @@ public class IntersectionOfArray {
     }
 
     public static int[] arr(int[] answer) {
+        if (answer.length == 0) {
+            return new int[0];
+        }
         int i = 0;
-        int j = 0;
+        int j = 1;
         while (j < answer.length) {
             if (answer[i] != answer[j]) {
                 i++;
